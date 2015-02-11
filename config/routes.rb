@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  get 'jobs/index'
+  root 'jobs#index'
 
-  get 'jobs/jobs'
+  get 'jobs' => 'jobs#jobs'
 
-  get 'jobs/locations'
+  get 'locations' => 'jobs#locations'
 
-  get 'jobs/results'
+  get 'results' =>  'jobs#results'
 
-  get 'jobs/descriptions'
+  get 'descriptions' => 'jobs#descriptions'
 
-  get 'jobs/finished'
+  get 'finished' => 'jobs#finished'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

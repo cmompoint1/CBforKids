@@ -1,0 +1,117 @@
+.full .column, .full, .full .column a {
+	height: 100%;
+}
+
+.full .column a {
+	display: inline-block;
+}
+
+.mountains, .city, .beach, .country{
+	height: 100%;
+	width: 100%;
+}
+
+.full, .full2 {
+	max-width: none;
+}
+
+.full2 {
+	margin-top: 100px;
+}
+
+.bottom {
+	position: absolute;
+	bottom: 5%;
+	center: 50%;
+}
+
+h1 {
+	text-shadow: 0 0 10px #000000;
+	color: #ffffff;
+}
+
+h2.bottom {
+	width: 100%;
+	color: #ffffff;
+	text-shadow: 0 0 10px #000000;
+}
+
+h3 {
+	color: #ffffff;
+	text-shadow: 0 0 10px #000000;
+}
+
+.mountains {
+	background-image: url("<%= asset_path 'mountains.jpg' %>");
+	background-position: 80%;
+	background-size: cover;
+}
+
+.country {
+	background-image: url("<%= asset_path 'country.jpg' %>");
+	background-position: 30%;
+	background-size: cover;
+}
+
+.city {
+	background-image: url("<%= asset_path 'city.jpg' %>");
+	background-position: 30%;
+	background-size: cover;
+}
+
+.beach {
+	background-image: url("<%= asset_path 'beach.jpg' %>");
+	background-position: 50%;
+	background-size: cover;
+}
+
+.heading {
+	position: absolute;
+	width: 100%;
+	top: 5%;
+}
+
+.image {
+	}
+img.location-job {
+	height: 40%;
+	position: absolute;
+	bottom: 20%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,.25));
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,.25));
+}
+
+img.results-job {
+	height: 50%;
+	position: absolute;
+	bottom: 5%;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,.25));
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,.25));
+}
+
+.results {
+	background-color: rgba(256, 256, 256, .75);
+	overflow: scroll;
+	padding:0 2em;
+}
+
+.row.list {
+	margin-top: 1.5em;
+}
+
+.shadow {
+	-webkit-filter: drop-shadow(5px 5px 5px rgba(0,0,0,.25));
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,.25));
+}
+
+.image-bottom {
+	background-position: bottom center;
+}

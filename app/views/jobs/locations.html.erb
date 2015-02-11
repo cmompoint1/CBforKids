@@ -1,2 +1,20 @@
-<h1>Jobs#locations</h1>
-<p>Find me in app/views/jobs/locations.html.erb</p>
+<% @locations = {"mountains" => "Mountains", "country" => "Country", "city" =>"Big City", "beach" => "Beach"} %>
+
+<div class="row collapse full">
+<% @locations.each do |key, id| %>
+	<div class="column small-3 text-center">
+		<a href="<%= results_path(params.merge(location: key).except(:action, :controller)) %>" class=<%= key %>>
+			<h2 class="bottom">
+				<%= id %>
+			</h2>
+		</a>
+	</div>
+<% end %>
+</div>
+
+<div class="heading text-center">
+	<h1>So you want to be a <%= params[:job].capitalize %>, great!</h1>
+	<h1>Where do you want to live?</h1>
+</div>
+<% image_id = params[:job] + ".png" %>
+<%= image_tag(image_id, class: "location-job") %>

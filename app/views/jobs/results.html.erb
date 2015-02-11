@@ -1,2 +1,25 @@
-<h1>Jobs#results</h1>
-<p>Find me in app/views/jobs/results.html.erb</p>
+<div class="row full image-bottom <%= params[:location] %>">
+	<div class="column small-4">
+		<h3>So you want to be a</h3>
+		<h3><%= params[:job].capitalize %> in the <%= params[:location] %></h3>
+		<br>
+		<h3>Here’s the jobs you can have.</h3>
+		<br>
+		<h3>Pick the one you want.</h3>
+		<% image_id = params[:job] + ".png" %>
+		<%= image_tag(image_id, class: "results-job") %>
+	</div>
+	<div class="column small-8 results">
+		<% 25.times do %>
+			<div class="row list">
+				<div class="column small-9">
+					<h3>Senior Detective</h3>
+					<h4>Atlanta Police Department</h4>
+				</div>
+				<div class="column small-3 end">
+					<%= link_to "This one!", finished_path(params.merge(title: "job-title", company: "company-name", city: "city, state").except(:job, :location, :action, :controller)), class: "button expand small" %>
+				</div>
+			</div>
+		<% end %>
+	</div>
+</div>

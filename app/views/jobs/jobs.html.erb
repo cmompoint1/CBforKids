@@ -1,2 +1,20 @@
-<h1>Jobs#jobs</h1>
-<p>Find me in app/views/jobs/jobs.html.erb</p>
+<% @jobs = ["chef", "construction", "cowboy", "detective", "doctor", "firefighter", "mechanic", "scientist", "teacher"] %>
+
+<div class="text-center">
+	<h1>So what do you want to be when you grow up?</h1>
+</div>
+
+<div class="row full2">
+	<div class="column small-12 small-center">
+		<div class="row">
+			<ul class="small-block-grid-4 large-block-grid-9" data-equalizer>
+			<% @jobs.each do |id| %>
+			<li>
+				<a href="<%= locations_path(params.merge(job: id).except(:action, :controller))%>" class="text-center">
+					<% image_id = id + ".png" %>
+					<%= image_tag image_id, data: { equalizer_watch: ''}, class: "shadow" %><h4><%= id %></h4></a></li>
+			<% end %>
+			</ul>
+		</div>
+	</div>
+</div>
