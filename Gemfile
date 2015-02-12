@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -23,7 +23,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'foundation-rails'
 
-gem 'iconv'
+gem 'tzinfo-data'
 gem 'cb-api', require: 'cb'
 
 # Use ActiveModel has_secure_password
