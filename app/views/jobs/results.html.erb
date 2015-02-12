@@ -13,11 +13,11 @@
 		<% @results.model.jobs.each do |job| %>
 			<div class="row list">
 				<div class="column small-9">
-					<h3><%= job.title %></h3>
+					<h3 class="resultsheader"><%= job.title %></h3>
 					<h4><%= job.company_name %> in <%= job.location %></h4>
 				</div>
 				<div class="column small-3 end">
-					<%= link_to "This one!", finished_path(params.merge(title: job.title, company: job.company_name, city: job.location).except(:action, :controller)), class: "button expand small" %>
+					<%= link_to "This one!", finished_path(params.merge(title: job.title, company: job.company_name, city: job.location).except(:action, :controller)), class: "button expand " %>
 				</div>
 			</div>
 		<% end %>
