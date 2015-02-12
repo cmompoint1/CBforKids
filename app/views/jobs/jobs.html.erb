@@ -1,13 +1,13 @@
-<% @jobs = ["chef", "construction", "cowboy", "detective", "doctor", "firefighter", "mechanic", "scientist", "teacher"] %>
+<% @jobs = ["chef", "builder", "doctor", "firefighter", "mechanic", "policeman", "scientist", "teacher"] %>
 
 <div class="text-center">
-	<h1>So what do you want to be when you grow up?</h1>
+	<h1 class="first">So what do you want to be when you grow up?</h1>
 </div>
 
 <div class="row full2">
 	<div class="column small-12 small-center">
 		<div class="row">
-			<ul class="small-block-grid-4 large-block-grid-9" data-equalizer>
+			<ul class="small-block-grid-4 large-block-grid-8" data-equalizer>
 			<% @jobs.each do |id| %>
 			<li>
 				<a href="<%= locations_path(params.merge(job: id).except(:action, :controller))%>" class="text-center">

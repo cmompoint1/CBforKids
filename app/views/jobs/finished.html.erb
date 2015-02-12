@@ -1,2 +1,19 @@
-<h1>Jobs#finished</h1>
-<p>Find me in app/views/jobs/finished.html.erb</p>
+<div class="row full image-bottom <%= params[:location] %>">
+	<div class="columns small-8 small-centered text-center">
+		<h1>Congratulations you got a job!</h1>
+	</div>
+	<div class="columns small-6 small-centered small-bump">
+		<%= image_tag "certificate.png", class: "certificate" %>
+	</div>
+</div>
+<div class="heading final text-center">
+	<h2 class="last">My job is</h2>
+	<% image_id = params[:job] + ".png" %>
+	<%= image_tag(image_id, class: "final-job") %>
+	<div class="bump">
+		<h4 class="last"><%= params[:title] %> at <%= params[:company] %></h4>
+		<p><%= params[:city] %></p>
+	</div>
+</div>
+
+

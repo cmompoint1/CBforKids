@@ -1,6 +1,12 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'cb'
+
+Cb.configure do |config|
+  config.dev_key    = 'WDHV5HF6Y0FMG37BSM4N'
+  config.time_out   = 5
+end
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.

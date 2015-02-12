@@ -10,14 +10,14 @@
 		<%= image_tag(image_id, class: "results-job") %>
 	</div>
 	<div class="column small-8 results">
-		<% 25.times do %>
+		<% @results.model.jobs.each do |job| %>
 			<div class="row list">
 				<div class="column small-9">
-					<h3>Senior Detective</h3>
-					<h4>Atlanta Police Department</h4>
+					<h3><%= job.title %></h3>
+					<h4><%= job.company_name %> in <%= job.location %></h4>
 				</div>
 				<div class="column small-3 end">
-					<%= link_to "This one!", finished_path(params.merge(title: "job-title", company: "company-name", city: "city, state").except(:job, :location, :action, :controller)), class: "button expand small" %>
+					<%= link_to "This one!", finished_path(params.merge(title: job.title, company: job.company_name, city: job.location).except(:action, :controller)), class: "button expand small" %>
 				</div>
 			</div>
 		<% end %>
