@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'jobs#index'
+  root 'jobs#jobs'
 
-  get 'jobs' => 'jobs#jobs'
+  # get 'jobs' => 'jobs#jobs'
 
   get 'locations' => 'jobs#locations'
 
