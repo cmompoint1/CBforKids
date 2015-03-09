@@ -1,5 +1,10 @@
+
 <div class="row full image-bottom <%= params[:location] %>">
 	<div class="column small-4">
+		<br>
+		<br>
+		<br>
+		<br>
 		<h3>So you want to be a</h3>
 		<h3><%= params[:job].capitalize %> in the <%= params[:location] %></h3>
 		<br>
@@ -17,7 +22,7 @@
 					<h4><%= job.company_name %></h4>
 				</div>
 				<div class="column small-3 end">
-					<%= link_to "This one!", finished_path(params.merge(title: "job-title", company: "company-name", city: "city, state").except(:job, :location, :action, :controller)), class: "button expand small" %>
+					<%= link_to "This one!", finished_path(params.merge(title: job.title, company: job.company_name, city: job.location).except(:action, :controller)), class: "button expand " %>
 				</div>
 			</div>
 		<% end %> 
