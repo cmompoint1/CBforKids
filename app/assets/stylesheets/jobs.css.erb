@@ -26,19 +26,19 @@
 }
 
 h1 {
-	text-shadow: 0 0 10px #000000;
+	text-shadow: 0 0 10px rgba(0,0,0, .5);
 	color: #ffffff;
 }
 
 h2.bottom {
 	width: 100%;
 	color: #ffffff;
-	text-shadow: 0 0 10px #000000;
+	text-shadow: 0 0 10px rgba(0,0,0, .5);
 }
 
 h3 {
 	color: #ffffff;
-	text-shadow: 0 0 10px #000000;
+	text-shadow: 0 0 10px rgba(0,0,0, .5);
 }
 
 .mountains {
@@ -137,7 +137,7 @@ img.final-job {
 }
 
 .heading.final {
-	top: 20%;
+	top: 25%;
 	left: 0;
 	right: 0;
 	width: 35%;
@@ -164,3 +164,12 @@ body {
 
 body:before{
 	background-color: rgba(256, 256, 256, 1);}
+
+.logo {
+	height:auto;
+	width: 10em;
+	-webkit-filter: drop-shadow(rgba(0,0,0, .5));
+	filter: drop-shadow(rgba(0,0,0, .5));
+	position:absolute;
+	z-index: 9999;
+}
